@@ -6,8 +6,47 @@
           } else {
             startDiv.style.display ='block';
           }
+          let timeleft = 45;
+          const downloadTimer = setInterval(function(){
+          document.getElementById("progressBar").value = 45 - --timeleft;
+          if(timeleft <= 0)
+            clearInterval(downloadTimer);
+          },1000);
         }
 
+        const timeOut = function() {
+          console.log('koniec');
+          function addElement() {
+            const newDiv = document.createElement("div");
+            newDiv.className += "gameOverDiv";
+            const currentElement = document.querySelector('body');
+            currentElement.appendChild(newDiv);
+
+            const congrBox = document.createElement("div");
+            congrBox.className +=  "congrBox";
+            const congrTextBox = document.createElement("div");
+            const newContent = document.createTextNode('Time out!');
+            congrTextBox.appendChild(newContent);
+            congrTextBox.className += "congrTextBox";
+
+            congrBox.appendChild(congrTextBox);
+
+            newDiv.appendChild(congrBox);
+
+
+            const playAgainBtn = document.createElement('div');
+            const playAgainBtnText = document.createTextNode('Try again?');
+            playAgainBtn.appendChild(playAgainBtnText);
+            playAgainBtn.id += "playAgainBtn";
+            congrBox.appendChild(playAgainBtn);
+
+            document.getElementById('playAgainBtn').onclick=function() {
+              location.reload();
+            }
+
+          }
+          addElement();
+        }
 
 
 

@@ -1,12 +1,37 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 body {
-  background-color: #102128;
+  background-color: #f5edd9;
+}
+
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+   appearance: none;
+
+  width: 250px;
+  height: 20px;
+}
+
+progress[value]::-webkit-progress-bar {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 904px;
+  height: 20px;
+  top: 5%;
+  left: 15%;
+  background-color: #f5edd9;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: #F9517E;
+  background-size: 904px 20px;
 }
 
 .container {
   position: absolute;
-  background-color: #204867;
+  background-color: #849d9a;
   top: 10%;
   left: 15%;
   z-index: 2;
@@ -17,7 +42,7 @@ body {
 #start {
   display: flex;
   position: absolute;
-  background-color: #204867;
+  background-color: #849d9a;
   z-index: 100;
   top: 10%;
   left: 15%;
@@ -30,21 +55,21 @@ body {
 .startBtn {
   width: 200px;
   height: 75px;
-  background-color: #FFE6E6;
+  background-color: #2e485;
   font-size: 38px;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 5px;
   text-shadow: 2px 2px #F9517E;
-  color: #102128;
+  color: #2e4858;
   box-shadow: 10px 10px #F9517E;
   outline: none;
 }
 
 .gameOverDiv {
   display: flex;
-  background-color: #204867;
+  background-color: #ede9e0;
   justify-content: center;
   align-items: center;
   top: 10%;
@@ -59,7 +84,7 @@ body {
   display: flex;
   width: 600px;
   height: 100px;
-  background-color: #FFE6E6;
+  background-color: #ede9e0;
 
   box-shadow: 10px 10px #F9517E;
   flex-wrap: wrap;
@@ -77,7 +102,7 @@ body {
   font-weight: 600;
   letter-spacing: 5px;
   text-shadow: 2px 2px #F9517E;
-  color: #102128;
+  color: #2e4858;
   }
 
 canvas {
@@ -86,7 +111,7 @@ canvas {
 
 #playAgainBtn {
   display: flex;
-  border: 2px solid #204857;
+  border: 2px solid #2e4858;
   height: 25px;
   width: 200px;
   font-family: 'Montserrat', sans-serif;
@@ -96,6 +121,304 @@ canvas {
   letter-spacing: 5px;
   background-color: #FFE6E6;
   text-shadow: 2px 2px #F9517E;
-  color: #102128;
+  color: #2e4858;
   justify-content: center;
+}
+
+/**/
+/**/
+/**/
+.jigsaw {
+  margin: -75px 100px 0;
+  display: inline-block;
+  -webkit-animation: jigsaw 10s infinite linear;
+  -moz-animation: jigsaw 10s infinite linear;
+}
+/**/
+/**/
+/**/
+.puzzleContainer {
+  display: flex;
+  float: right;
+  flex-wrap: nowrap;
+}
+
+.jigsaw1 {
+ font-size: 12px;
+  width: 6em;
+  height: 6em;
+  position: relative;
+  -webkit-border-radius: .5em;
+  -moz-border-radius: .5em;
+  border-radius: .5em;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+}
+
+.jigsaw1,
+.jigsaw1 span {
+ background-color: #F9517E;
+}
+
+.jigsaw1 .t {
+ width: 2em;
+  height: 2em;
+  position: absolute;
+  top: -1.5em;
+  left: 2em;
+  -webkit-border-radius: 4em;
+  -moz-border-radius: 4em;
+  border-radius: 4em;
+}
+
+.jigsaw1 .r {
+ width: 2em;
+  height: 2em;
+  position: absolute;
+  top: 2em;
+  left: 5.5em;
+  -webkit-border-radius: 4em;
+  -moz-border-radius: 4em;
+  border-radius: 4em;
+}
+
+.jigsaw1 .b {
+ width: 1.8em;
+  height: 1.8em;
+  position: absolute;
+  top: 4.5em;
+  left: 2.2em;
+  -webkit-border-radius: 4em;
+  -moz-border-radius: 4em;
+  border-radius: 4em;
+  background-color: #f5edd9;
+}
+
+.jigsaw1 .l {
+ width: 1.8em;
+  height: 1.8em;
+  position: absolute;
+  top: 2.2em;
+  left: -.4em;
+  -webkit-border-radius: 4em;
+  -moz-border-radius: 4em;
+  border-radius: 4em;
+  background-color: #f5edd9;
+}
+
+ /**/
+/**/
+/**/
+/**/
+
+.jigsaw2 {
+ font-size: 12px;
+  width: 6em;
+  height: 6em;
+  position: relative;
+  -webkit-border-radius: .5em;
+  -moz-border-radius: .5em;
+  border-radius: .5em;
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+}
+
+.jigsaw2,
+.jigsaw2 span {
+ background-color: #F9517E;
+}
+
+.jigsaw2 .t {
+ width: 2em;
+  height: 2em;
+  position: absolute;
+  top: -1.5em;
+  left: 2em;
+  -webkit-border-radius: 4em;
+  -moz-border-radius: 4em;
+  border-radius: 4em;
+}
+
+.jigsaw2 .r {
+ width: 2em;
+  height: 2em;
+  position: absolute;
+  top: 2em;
+  left: 5.5em;
+  -webkit-border-radius: 4em;
+  -moz-border-radius: 4em;
+  border-radius: 4em;
+}
+
+.jigsaw2 .b {
+ width: 1.8em;
+  height: 1.8em;
+  position: absolute;
+  top: 4.5em;
+  left: 2.2em;
+  -webkit-border-radius: 4em;
+  -moz-border-radius: 4em;
+  border-radius: 4em;
+  background-color: #f5edd9;
+}
+
+.jigsaw2 .l {
+ width: 1.8em;
+  height: 1.8em;
+  position: absolute;
+  top: 2.2em;
+  left: -.4em;
+  -webkit-border-radius: 4em;
+  -moz-border-radius: 4em;
+  border-radius: 4em;
+  background-color: #f5edd9;
+}
+
+/**/
+/**/
+/**/
+/**/
+.jigsaw3 {
+ font-size: 12px;
+  width: 6em;
+  height: 6em;
+  position: relative;
+  -webkit-border-radius: .5em;
+  -moz-border-radius: .5em;
+  border-radius: .5em;
+  -webkit-animation-delay: 1.7s;
+  -moz-animation-delay: 1.7s;
+}
+
+.jigsaw3,
+.jigsaw3 span {
+ background-color: #F9517E;
+}
+
+.jigsaw3 .t {
+ width: 2em;
+  height: 2em;
+  position: absolute;
+  top: -1.5em;
+  left: 2em;
+  -webkit-border-radius: 4em;
+  -moz-border-radius: 4em;
+  border-radius: 4em;
+}
+
+.jigsaw3 .r {
+ width: 2em;
+  height: 2em;
+  position: absolute;
+  top: 2em;
+  left: 5.5em;
+  -webkit-border-radius: 4em;
+  -moz-border-radius: 4em;
+  border-radius: 4em;
+}
+
+.jigsaw3 .b {
+ width: 1.8em;
+  height: 1.8em;
+  position: absolute;
+  top: 4.5em;
+  left: 2.2em;
+  -webkit-border-radius: 4em;
+  -moz-border-radius: 4em;
+  border-radius: 4em;
+  background-color: #f5edd9;
+}
+
+.jigsaw3 .l {
+ width: 1.8em;
+  height: 1.8em;
+  position: absolute;
+  top: 2.2em;
+  left: -.4em;
+  -webkit-border-radius: 4em;
+  -moz-border-radius: 4em;
+  border-radius: 4em;
+  background-color: #f5edd9;
+}
+
+/**/
+/**/
+/**/
+
+.jigsaw4 {
+ font-size: 12px;
+  width: 6em;
+  height: 6em;
+  position: relative;
+  -webkit-border-radius: .5em;
+  -moz-border-radius: .5em;
+  border-radius: .5em;
+  -webkit-animation-delay: 1.7s;
+  -moz-animation-delay: 1.7s;
+}
+
+.jigsaw4,
+.jigsaw4 span {
+ background-color: #F9517E;
+}
+
+.jigsaw4 .t {
+ width: 2em;
+  height: 2em;
+  position: absolute;
+  top: -1.5em;
+  left: 2em;
+  -webkit-border-radius: 4em;
+  -moz-border-radius: 4em;
+  border-radius: 4em;
+}
+
+.jigsaw4 .r {
+ width: 2em;
+  height: 2em;
+  position: absolute;
+  top: 2em;
+  left: 5.5em;
+  -webkit-border-radius: 4em;
+  -moz-border-radius: 4em;
+  border-radius: 4em;
+}
+
+.jigsaw4 .b {
+ width: 1.8em;
+  height: 1.8em;
+  position: absolute;
+  top: 4.5em;
+  left: 2.2em;
+  -webkit-border-radius: 4em;
+  -moz-border-radius: 4em;
+  border-radius: 4em;
+  background-color: #f5edd9;
+}
+
+.jigsaw4 .l {
+ width: 1.8em;
+  height: 1.8em;
+  position: absolute;
+  top: 2.2em;
+  left: -.4em;
+  -webkit-border-radius: 4em;
+  -moz-border-radius: 4em;
+  border-radius: 4em;
+  background-color: #f5edd9;
+}
+
+@-webkit-keyframes jigsaw {
+0% {
+opacity: 1;
+-webkit-transform: translate(0, 0px) rotateZ(0deg);
+}
+75% {
+opacity: 1;
+-webkit-transform: translate(100px, 100vh) rotateZ(270deg);
+}
+100% {
+opacity: 0;
+-webkit-transform: translate(150px, 100vh) rotateZ(360deg);
+}
 }
